@@ -1,0 +1,19 @@
+{
+  "company": {
+    "logo": {
+      "fileName": "logo",
+      "alt": "AndSmi's logo",
+      "url": "#",
+      "urlTitle": "Linked logo"
+    },
+    "seoInfo": {
+      "title": "AndSmi - Landing page and other sites by AndSmi",
+      "keywords": "sites, development, landing, business",
+      "description": "Creating useful and modern websites for your own business"
+    }
+  },
+  "copyright": {
+    "author": "AndSmi",
+    "copyright": "Developed by AndSmi"
+  }
+}

@@ -1,0 +1,21 @@
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(253, 228, 165, 0.4);
+  }
+
+  70% {
+    box-shadow: 0 0 0 10px rgba(223, 228, 165, 0);
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 rgba(223, 228, 165, 0);
+  }
+}
+
+.pulse {
+  animation: pulse 1.5s ease-in-out infinite;
+
+  &:hover {
+    animation-duration: 1s;
+  }
+}

@@ -1,0 +1,6 @@
+extends ../templates/template
+
+block SEO
+  +genMeta('keywords', company.seoInfo.keywords)
+  +genMeta('description', company.seoInfo.description)
+  title= company.seoInfo.title

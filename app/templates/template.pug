@@ -1,0 +1,23 @@
+include mixins
+include ../components/header/header
+include ../components/content/content
+include ../components/footer/footer
+doctype html
+html(lang="ru")
+    head
+        meta(http-equiv="Content-Type" content="text/html; charset=UTF-8")
+        +genMeta('viewport', 'width=device-width, initial-scale=1')
+        block SEO
+        each val, i in copyright
+            +genMeta(i, val)
+        +genLink('favicon.ico', 'shortcut icon')
+        +genLink('styles', 'stylesheet')
+    body
+        .page
+            +getHeader('page', true)
+            block Content
+                +getContent('page', true)
+            +getFooter('page')
+
+        +genScript('libs.min')
+        +genScript('app.min')

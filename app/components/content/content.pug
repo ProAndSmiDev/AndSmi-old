@@ -1,0 +1,9 @@
+mixin getContent(parent, isSecondary, page)
+    main.content(class=`${parent}__content`)
+        if !isSecondary
+            | Main page
+        else
+            if page === 'error'
+                | Error page
+            else if page === 'block'
+                | Blocked page

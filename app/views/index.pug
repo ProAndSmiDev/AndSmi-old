@@ -4,3 +4,13 @@ block SEO
   +genMeta('keywords', company.seoInfo.keywords)
   +genMeta('description', company.seoInfo.description)
   title= company.seoInfo.title
+  +genLink('./', 'canonical')
+
+block Header
+  +getHeader('page', true)
+
+block Content
+  +getContent('page', true)
+
+block Footer
+  +getFooter('page')

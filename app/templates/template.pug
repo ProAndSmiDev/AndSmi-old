@@ -14,10 +14,12 @@ html(lang="ru")
         +genLink('styles', 'stylesheet')
     body
         .page
-            +getHeader('page', true)
+            block Header
+
             block Content
-                +getContent('page', true)
-            +getFooter('page')
+
+            block Footer
+
 
         +genScript('libs.min')
         +genScript('app.min')

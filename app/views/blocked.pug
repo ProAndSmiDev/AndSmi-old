@@ -4,6 +4,7 @@ block SEO
   +genMeta('keywords', company.seoInfo.keywords)
   +genMeta('description', company.seoInfo.description)
   title= company.seoInfo.title + '- countdown for openning a site'
+  +genLink('./blocked.html', 'canonical')
 
 block Content
   +getContent('page', false, 'block')

@@ -1,14 +1,19 @@
 mixin genLogo(parent)
     a.logo(class=`${parent}__logo` href=company.logo.url title=company.logo.urlTitle)
         picture.logo__pic
-            source(type='image/webp' srcset=`/img/${company.logo.fileName}.webp`)
-            img.logo__img(alt=alt src=`/img/${company.logo.fileName}.png`)
+            source(type='image/webp' srcset=`./img/${company.logo.fileName}.webp`)
+            img.logo__img(alt=alt src=`./img/${company.logo.fileName}.png`)
 
 mixin genMeta(name, content)
     meta(name=name content=content)
 
 mixin genLink(file, rel)
     if(rel === 'shortcut icon')
-        link(href='/img/' + file, rel=rel)
+        link(href='./img/' + file, rel=rel)
     else if(rel === 'stylesheet')
-        link(href='/css/' + file + '.css', rel=rel)
+        link(href='./css/' + file + '.css', rel=rel)
+    else
+      link(href=file rel=rel)
+
+mixin genScript(file)
+  script(src=`./js/${file}.js`)

@@ -1,6 +1,6 @@
-mixin getContent(parent, isSecondary, page)
+mixin getContent(parent, isPrimary, page)
     main.content(class=`${parent}__content`)
-        if !isSecondary
+        if isPrimary
             | Main page
         else
             if page === 'error'

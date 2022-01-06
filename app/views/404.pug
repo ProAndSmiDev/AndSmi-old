@@ -4,6 +4,7 @@ block SEO
   +genMeta('keywords', company.seoInfo.keywords)
   +genMeta('description', company.seoInfo.description)
   title= company.seoInfo.title + '- 404 (page not found!)'
+  +genLink('./404.html', 'canonical')
 
 block Content
   +getContent('page', false, 'error')
